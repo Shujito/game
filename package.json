@@ -1,0 +1,17 @@
+{
+  "name": "socket-thing",
+  "version": "1.0.0",
+  "description": "blah",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.4",
+    "socket.io": "^1.3.5",
+    "socket.io-client": "^1.3.5",
+    "uuid": "^2.0.1"
+  }
+}
