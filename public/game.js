@@ -5,7 +5,7 @@ window.onload = function() {
 		console.log('you are', data.uuid);
 	});
 	socket.on('player move', function(data) {
-		console.log('player', data.uuid, 'moved to', data.x, data.y);
+		//console.log('player', data.uuid, 'moved to', data.x, data.y);
 	});
 	var canvas = window.document.getElementById('canvas');
 	var _2d = canvas.getContext('2d');
