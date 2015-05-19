@@ -19,5 +19,5 @@ io.on('connection', function(socket) {
 });
 
 http.listen(0xcafe, function() {
-	console.log('listening on *:51914');
+	console.log('listening on *:'+0xcafe);
 });
