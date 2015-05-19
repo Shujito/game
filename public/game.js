@@ -14,15 +14,11 @@ window.onload = function() {
 		players[iAm] = {x: width, y: height,smoothX: width, smoothY: height};
 	});
 	socket.on('player move', function(data) {
-		//console.log('player', data.uuid, 'moved to', data.x, data.y);
-		//players[data.uuid] = { x: data.x, y: data.y };
 		if(!players[data.uuid]) {
 			players[data.uuid] = {x: 0, y: 0, smoothX: data.x, smoothY: data.y};
 		}
 		players[data.uuid].x = data.x;
 		players[data.uuid].y = data.y;
-		//players[data.uuid].smoothX = data.x;
-		//players[data.uuid].smoothY = data.y;
 	});
 	socket.on('left', function(data) {
 		console.log('who left:', data.uuid);
@@ -35,7 +31,6 @@ window.onload = function() {
 		socket.emit('player move', {x: x, y: y});
 	}
 	canvas.onmousemove = function(e) {
-		//socket.emit('player move', {x:mouseX,y:mouseY});
 		move(e.offsetX, e.offsetY);
 	}
 	canvas.addEventListener('touchmove', function(e) {
@@ -50,8 +45,6 @@ window.onload = function() {
 		_2d.clearRect(0, 0, 640, 480);
 		for(var k in players) {
 			var player = players[k];
-			//if (!player.smoothX) player.smoothX = width;
-			//if (!player.smoothY) player.smoothY = height;
 			var distanceX = (player.x - player.smoothX) / 8;
 			var distanceY = (player.y - player.smoothY) / 8;
 			player.smoothX += distanceX;
