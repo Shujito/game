@@ -18,6 +18,6 @@ io.on('connection', function(socket) {
 	});
 });
 
-http.listen(0xcafe, function() {
-	console.log('listening on *:'+0xcafe);
+http.listen(0xcaca, function() {
+	console.log('listening on *:'+0xcaca);
 });
