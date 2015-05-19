@@ -14,8 +14,8 @@ io.on('connection', function(socket) {
 		io.emit('left', {uuid:user});
 	});
 	socket.on('player move', function(data) {
-		io.emit('player move', {uuid:user, x:data.x, y:data.y});
-	})
+		socket.broadcast.emit('player move', {uuid:user, x:data.x, y:data.y});
+	});
 });
 
 http.listen(3000, function() {
