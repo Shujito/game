@@ -19,5 +19,5 @@ io.on('connection', function(socket) {
 });
 
 http.listen(0xcaca, function() {
-	//console.log('listening on *:'+0xcaca);
+	console.log('listening on *:'+0xcaca);
 });
