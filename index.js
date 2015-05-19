@@ -18,6 +18,6 @@ io.on('connection', function(socket) {
 	});
 });
 
-http.listen(51914, function() {
+http.listen(0xcafe, function() {
 	console.log('listening on *:51914');
 });
