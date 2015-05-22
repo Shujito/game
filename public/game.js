@@ -31,7 +31,10 @@ window.onload = function() {
 		socket.emit('player move', {x: x, y: y});
 	}
 	canvas.onmousemove = function(e) {
-		move(e.offsetX, e.offsetY);
+		var bounds = this.getBoundingClientRect();
+		var x = e.clientX - bounds.left;
+		var y = e.clientY - bounds.top;
+		move(x,y);
 	}
 	canvas.addEventListener('touchmove', function(e) {
 		e.preventDefault();
